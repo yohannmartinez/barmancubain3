@@ -11,7 +11,7 @@
 {#if $isMenuOpen}
 	<button
 		transition:fade={{ duration: 200 }}
-		class="fixed left-0 top-0 h-screen w-screen bg-slate-800 bg-opacity-50 p-6 backdrop-blur-sm"
+		class="fixed left-0 top-0 z-10 h-screen w-screen bg-slate-800 bg-opacity-50 p-6 backdrop-blur-sm"
 		on:click={() => isMenuOpen.set(false)}
 		aria-label="Fermer le menu"
 	>
@@ -21,7 +21,7 @@
 {#if $isMenuOpen}
 	<div
 		transition:scale={{ start: 0.8, duration: 300 }}
-		class="absolute bottom-2 left-1/2 flex w-full max-w-80 -translate-x-1/2 flex-col items-center justify-center rounded-3xl border bg-white p-4 shadow-2xl"
+		class="absolute bottom-2 left-1/2 z-10 flex w-full max-w-80 -translate-x-1/2 flex-col items-center justify-center rounded-3xl border bg-white p-4 shadow-2xl"
 	>
 		<button class="mb-3 w-full rounded-2xl border border-gray-200 p-2">
 			<div class="flex items-center">

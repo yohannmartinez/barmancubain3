@@ -1,6 +1,6 @@
 <script>
-	import Button from '$lib/components/ui/button/button.svelte';
-	import { isMenuOpen } from '$lib/stores/menu';
+	import Navbar from '$lib/components/ui/navbar/navbar.svelte';
 </script>
 
-<Button on:click={() => isMenuOpen.set(true)}>menu</Button>
+<Navbar />
+<div class="h-[2000px]"></div>
