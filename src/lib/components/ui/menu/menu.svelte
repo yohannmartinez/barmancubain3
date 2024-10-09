@@ -1,6 +1,6 @@
 <script>
 	import { isMenuOpen } from '$lib/stores/menu';
-	import { fade, scale, slide } from 'svelte/transition';
+	import { fade, scale } from 'svelte/transition';
 	import IconX from '~icons/tabler/x';
 	import IconHome from '~icons/tabler/building-pavilion';
 	import IconServices from '~icons/tabler/glass-cocktail';
