@@ -14,6 +14,9 @@ const config: Config = {
 			}
 		},
 		extend: {
+			backgroundImage: {
+				'white-to-black': 'linear-gradient(137.59deg, #555 20%, #000 75%)'
+			},
 			colors: {
 				border: 'hsl(var(--border) / <alpha-value>)',
 				input: 'hsl(var(--input) / <alpha-value>)',

@@ -9,6 +9,8 @@
 
 @layer base {
 	:root {
+		--navbar-size: 105px;
+
 		--background: 0 0% 100%;
 		--foreground: 224 71.4% 4.1%;
 
@@ -42,6 +44,8 @@
 	}
 
 	.dark {
+		--navbar-size: 105px;
+
 		--background: 224 71.4% 4.1%;
 		--foreground: 210 20% 98%;
 
@@ -79,5 +83,62 @@
 	}
 	body {
 		@apply bg-background text-foreground;
+	}
+}
+
+@layer utilities {
+	.text-fill-transparent {
+		-webkit-text-fill-color: transparent; /* Support pour Chrome, Safari */
+		text-fill-color: transparent; /* Pour les autres navigateurs compatibles */
+	}
+
+	.pulse {
+		background: rgb(20, 198, 13);
+		border-radius: 100px;
+		margin: 10px;
+		height: 10px;
+		width: 10px;
+
+		box-shadow: 0 0 0 0 rgb(13, 148, 8);
+		transform: scale(1);
+		animation: pulse 2s infinite;
+	}
+
+	.carousel {
+		> * {
+			flex: 0 0 100%;
+		}
+	}
+
+	.carousel-group {
+		display: flex;
+		will-change: transform;
+		animation: scrolling 8s linear infinite;
+	}
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(13, 148, 8, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(13, 148, 8, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(13, 148, 8, 0);
+	}
+}
+
+@keyframes scrolling {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
 	}
 }

@@ -1,14 +1,21 @@
 <script lang="ts">
-	import IconMenu from '~icons/tabler/menu-3';
 	import Button from '../button/button.svelte';
-	import { isMenuOpen } from '$lib/stores/menu';
 </script>
 
-<div class="flex w-full items-center justify-between border-b border-white p-2">
-	<Button variant="ghost" />
-</div>
-
-<div class="fixed left-0 top-0 flex w-full items-center justify-between border-b bg-white p-2">
-	<Button variant="ghost" class="p-2" on:click={() => isMenuOpen.set(true)}><IconMenu /></Button>
-	<Button on:click={() => isMenuOpen.set(true)}>Réserver</Button>
+<div
+	class="ml-[35px] flex w-[calc(100vw-70px)] items-center justify-between border-x border-b px-14 py-6"
+>
+	<div class="flex">
+		<div class="h-14 w-20 border"></div>
+		<button class="ml-8 hidden tracking-tight md:block">Accueil</button>
+		<button class="ml-8 hidden tracking-tight md:block">Prestations</button>
+		<button class="ml-8 hidden tracking-tight md:block">Avis</button>
+	</div>
+	<div class="flex">
+		<div class="mr-8 flex hidden items-center justify-center tracking-tight md:flex">
+			<div class="pulse"></div>
+			Disponible
+		</div>
+		<Button on:click={() => {}}>Réserver</Button>
+	</div>
 </div>
