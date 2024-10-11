@@ -21,7 +21,9 @@
 	});
 </script>
 
-<div class="relative mx-[35px] flex w-[calc(100vw-70px)] border-x border-b px-4">
+<div
+	class="relative mx-[14px] flex w-[calc(100vw-28px)] border-x border-b px-4 sm:mx-[35px] sm:w-[calc(100vw-70px)]"
+>
 	<div class="flex w-full flex-col items-center justify-center py-20">
 		<a href="/test" class="mb-4 flex items-center rounded-xl bg-gray-100 p-[3px] text-sm">
 			<div class="hidden rounded-lg bg-black px-2 py-1 text-white sm:block">Nouveau</div>

@@ -5,7 +5,7 @@
 	import IconStar from '~icons/tabler/north-star';
 </script>
 
-<div class="relative mx-[35px] w-[calc(100vw-70px)]">
+<div class="relative mx-[14px] w-[calc(100vw-28px)] sm:mx-[35px] sm:w-[calc(100vw-70px)]">
 	<div class="carousel flex overflow-hidden border-x border-b">
 		<div class="carousel-group border-r bg-gray-100">
 			<div class="flex min-w-80 flex-1 items-center justify-center border-r bg-white p-5 sm:p-10">

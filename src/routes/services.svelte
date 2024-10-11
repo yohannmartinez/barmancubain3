@@ -14,7 +14,9 @@
 	});
 </script>
 
-<div class="relative mx-[35px] flex w-[calc(100vw-70px)] border-x border-b px-4">
+<div
+	class="relative mx-[14px] flex w-[calc(100vw-28px)] border-x border-b px-4 sm:mx-[35px] sm:w-[calc(100vw-70px)]"
+>
 	<div class="flex w-full flex-col md:flex-row md:gap-8">
 		<div class="top-0 my-20 flex h-screen w-full flex-1 items-center justify-center md:sticky">
 			<div class="flex flex-col items-center md:items-start">
