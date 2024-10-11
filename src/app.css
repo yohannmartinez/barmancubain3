@@ -15,9 +15,11 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
 	font-stretch: normal;
+	font-synthesis-weight: none;
 }
 html {
-	-webkit-text-size-adjust: 100%; /* Désactive l'ajustement automatique de la taille du texte */
+	-webkit-text-size-adjust: 100%;
+	font-synthesis-weight: none;
 }
 
 @layer base {
