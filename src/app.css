@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'GeistVF';
-	src: url('/fonts/Geist/GeistVF.ttf') format('truetype');
+	src: url('/fonts/Geist/geist.woff2') format('truetype');
 }
 
 @tailwind base;
@@ -10,6 +10,8 @@
 body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	font-stretch: normal;
 }
 @layer base {
 	:root {
