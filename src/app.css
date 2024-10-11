@@ -7,6 +7,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
 @layer base {
 	:root {
 		--navbar-size: 105px;
