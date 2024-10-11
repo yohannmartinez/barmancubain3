@@ -1,6 +1,9 @@
 @font-face {
 	font-family: 'GeistVF';
-	src: url('/fonts/Geist/geist.woff2') format('truetype');
+	src:
+		url('/fonts/Geist/GeistVF.woff2') format('woff2'),
+		url('/fonts/Geist/GeistVF.woff') format('woff'),
+		url('/fonts/Geist/GeistVF.ttf') format('truetype');
 }
 
 @tailwind base;
@@ -13,6 +16,10 @@ body {
 	text-rendering: optimizeLegibility;
 	font-stretch: normal;
 }
+html {
+	-webkit-text-size-adjust: 100%; /* Désactive l'ajustement automatique de la taille du texte */
+}
+
 @layer base {
 	:root {
 		--navbar-size: 105px;
