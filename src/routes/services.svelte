@@ -136,7 +136,8 @@
 				</div>
 				<div class="p-5">
 					<div
-						class={`h-60 w-full rounded-2xl border bg-gray-100 bg-[url('${services[selectedService].image}')] bg-cover bg-center`}
+						style="background-image: url('{services[selectedService].image}')"
+						class={`h-60 w-full rounded-2xl border bg-cover bg-center`}
 					></div>
 
 					<p class="md:text-md my-6 max-w-80 leading-7 tracking-tight">
