@@ -44,7 +44,7 @@
 		</p>
 
 		<div class="flex gap-4">
-			<Button class="sm:text-md rounded-xl py-6 pr-6" on:click={() => goto('/book')}
+			<Button class="sm:text-md rounded-xl p-6" on:click={() => goto('/book')}
 				>✨ Réserver une prestation</Button
 			>
 			<Button class="sm:text-md hidden rounded-xl p-6 sm:flex" variant="outline"

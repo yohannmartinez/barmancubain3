@@ -79,7 +79,7 @@
 			</div>
 		</div>
 
-		<div class="flex-1 pb-20 pt-2 md:pt-40">
+		<div class="flex-1 pb-10 pt-2 md:pt-40">
 			{#each services as service, serviceIndex}
 				<div
 					class="mb-10 rounded-3xl border p-2 shadow-[0_30px_56px_-18px_#17161f1f,_0_18px_32px_-24px_#0000000d] md:mb-20 lg:mx-10"
