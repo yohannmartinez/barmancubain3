@@ -5,7 +5,7 @@
 	import IconStar from '~icons/tabler/north-star';
 	import { goto } from '$app/navigation';
 
-	const words = ['mariage 💍', 'anniversaire 🎂', 'séminaire 💻'];
+	const words = ['mariage 💍', 'anniversaire 🎂', 'séminaire 🎉'];
 	let wordIndex = 0;
 	let interval: number;
 
