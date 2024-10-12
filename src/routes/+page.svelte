@@ -3,6 +3,7 @@
 	import Benefits from './benefits.svelte';
 	import Degustation from './degustation.svelte';
 	import Home from './home.svelte';
+	import Reviews from './reviews.svelte';
 	import Services from './services.svelte';
 </script>
 
@@ -11,3 +12,4 @@
 <Benefits />
 <Services />
 <Degustation />
+<Reviews />
