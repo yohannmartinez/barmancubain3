@@ -85,7 +85,7 @@
 					class="mb-10 rounded-3xl border p-2 shadow-[0_30px_56px_-18px_#17161f1f,_0_18px_32px_-24px_#0000000d] md:mb-20 lg:mx-10"
 				>
 					<div
-						class={`h-60 w-full rounded-2xl border bg-gray-100 bg-[url('${service.image}')] bg-cover bg-center md:h-80`}
+						class={`h-60 w-full rounded-2xl border bg-[url('${service.image}')] bg-cover bg-center md:h-80`}
 					></div>
 					<div class="m-6">
 						<h2 class=" text-2xl font-semibold tracking-tighter sm:text-2xl lg:text-2xl">
