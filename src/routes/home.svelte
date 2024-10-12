@@ -3,6 +3,7 @@
 	import Button from '$lib/components/ui/button/button.svelte';
 	import IconArrow from '~icons/tabler/arrow-narrow-right';
 	import IconStar from '~icons/tabler/north-star';
+	import { goto } from '$app/navigation';
 
 	const words = ['mariage 💍', 'anniversaire 🎂', 'séminaire 💻'];
 	let wordIndex = 0;
@@ -43,11 +44,11 @@
 		</p>
 
 		<div class="flex gap-4">
-			<Button class="sm:text-md rounded-xl py-6 pr-6"
-				><span class="pulse"></span>Réserver une prestation</Button
+			<Button class="sm:text-md rounded-xl py-6 pr-6" on:click={() => goto('/book')}
+				>✨ Réserver une prestation</Button
 			>
 			<Button class="sm:text-md hidden rounded-xl p-6 sm:flex" variant="outline"
-				>Consulter nos prestations</Button
+				>🍹 Consulter nos prestations</Button
 			>
 		</div>
 	</div>
