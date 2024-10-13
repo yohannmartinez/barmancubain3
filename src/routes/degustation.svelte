@@ -1,6 +1,6 @@
 <script>
-	import { goto } from '$app/navigation';
 	import Button from '$lib/components/ui/button/button.svelte';
+	import { isBookFormOpened } from '$lib/stores/book';
 </script>
 
 <div
@@ -23,7 +23,7 @@
 			<div class="flex gap-4">
 				<Button
 					class="sm:text-md rounded-xl border border-gray-700 bg-black px-6 py-6"
-					on:click={() => goto('/book')}>✨ Réserver une dégustation</Button
+					on:click={() => isBookFormOpened.set(true)}>✨ Réserver une dégustation</Button
 				>
 			</div>
 		</div>

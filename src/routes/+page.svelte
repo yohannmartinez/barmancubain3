@@ -2,6 +2,7 @@
 	import Footer from '$lib/components/ui/footer/footer.svelte';
 	import Navbar from '$lib/components/ui/navbar/navbar.svelte';
 	import Benefits from './benefits.svelte';
+	import BookForm from './bookForm.svelte';
 	import Degustation from './degustation.svelte';
 	import Faq from './faq.svelte';
 	import Home from './home.svelte';
@@ -17,3 +18,4 @@
 <Reviews />
 <Faq />
 <Footer />
+<BookForm />

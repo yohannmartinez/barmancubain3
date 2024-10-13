@@ -5,7 +5,7 @@
 	import { fade, slide } from 'svelte/transition';
 	import IconClose from '~icons/tabler/x';
 	import IconArrow from '~icons/tabler/arrow-right';
-	import { goto } from '$app/navigation';
+	import { isBookFormOpened } from '$lib/stores/book';
 
 	let width: number;
 
@@ -58,6 +58,7 @@
 </script>
 
 <div
+	id="services"
 	class="relative mx-[14px] flex w-[calc(100vw-28px)] border-x border-b px-4 sm:mx-[35px] sm:w-[calc(100vw-70px)]"
 >
 	<div class="flex w-full flex-col md:flex-row md:gap-8">
@@ -74,7 +75,8 @@
 				<Button
 					class="sm:text-md w-min rounded-xl py-6 pr-6"
 					aria-label="Réserver une prestation chez barman cubain"
-					on:click={() => goto('/book')}><span class="pulse"></span>Réserver une prestation</Button
+					on:click={() => isBookFormOpened.set(true)}
+					><span class="pulse"></span>Réserver une prestation</Button
 				>
 			</div>
 		</div>
@@ -126,7 +128,10 @@
 				>
 				<button
 					class="absolute bottom-4 right-4 flex h-10 w-10 items-center justify-center rounded-full bg-black text-white"
-					on:click={() => goto('/book')}
+					on:click={() => {
+						selectedService = undefined;
+						isBookFormOpened.set(true);
+					}}
 					aria-label="Allez à la page de reservation"><IconArrow /></button
 				>
 				<div class=" left-0 top-[70px] w-full border-b">

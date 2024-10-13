@@ -54,6 +54,7 @@
 </script>
 
 <div
+	id="questions"
 	class="relative mx-[14px] w-[calc(100vw-28px)] border-x border-b p-10 sm:mx-[35px] sm:w-[calc(100vw-70px)]"
 >
 	<h1
