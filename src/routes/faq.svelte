@@ -47,7 +47,7 @@
 		}
 	];
 
-	const toggleAnswer = (questionIndex) => {
+	const toggleAnswer = (questionIndex: number) => {
 		questions[questionIndex].showAnswer = !questions[questionIndex].showAnswer;
 	};
 </script>
