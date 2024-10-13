@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Footer from '$lib/components/ui/footer/footer.svelte';
 	import Navbar from '$lib/components/ui/navbar/navbar.svelte';
 	import Benefits from './benefits.svelte';
 	import Degustation from './degustation.svelte';
@@ -15,3 +16,4 @@
 <Degustation />
 <Reviews />
 <Faq />
+<Footer />

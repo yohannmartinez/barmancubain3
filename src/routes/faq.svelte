@@ -1,6 +1,7 @@
 <script lang="ts">
 	import IconPlus from '~icons/tabler/plus';
 	import IconMinus from '~icons/tabler/minus';
+	import IconStar from '~icons/tabler/north-star';
 
 	let questions = [
 		{
@@ -83,4 +84,6 @@
 			</button>
 		{/each}
 	</div>
+	<IconStar class="absolute bottom-0 left-0 z-10 translate-x-[-50%] translate-y-[50%]" />
+	<IconStar class="absolute bottom-0 right-0 z-10 translate-x-[50%] translate-y-[50%]" />
 </div>
