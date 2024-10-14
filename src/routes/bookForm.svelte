@@ -10,6 +10,7 @@
 	let text: string = '';
 	let email: string = '';
 	let date: string = '';
+	let tel: string = '';
 	let hasFailed: boolean = false;
 	let stepLength: number = 3;
 	let actualStep: number = 0;
@@ -22,7 +23,7 @@
 					'Content-Type': 'application/json'
 				},
 				body: JSON.stringify({
-					text: `Email client: ${email}\ndate: ${date}\ndemande:${text}`
+					text: `Email client: ${email}\nTel client: ${tel}\ndate: ${date}\ndemande:${text}`
 				})
 			});
 
@@ -85,6 +86,11 @@
 				</h2>
 
 				<Input placeholder="Votre email" bind:value={email} class="mb-4 rounded-xl px-3 py-6" />
+				<Input
+					placeholder="Votre numéro de tel"
+					bind:value={tel}
+					class="mb-4 rounded-xl px-3 py-6"
+				/>
 				<Input
 					placeholder="Date de votre évènement"
 					bind:value={date}
