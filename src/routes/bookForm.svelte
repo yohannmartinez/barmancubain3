@@ -10,8 +10,29 @@
 	let text: string = '';
 	let email: string = '';
 	let date: string = '';
+	let hasFailed: boolean = false;
 	let stepLength: number = 3;
 	let actualStep: number = 0;
+
+	const sendEmail = async () => {
+		try {
+			const hasSend = await fetch('/api/sendEmail', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					text: `Email client: ${email}\ndate: ${date}\ndemande:${text}`
+				})
+			});
+
+			if (hasSend.status === 200) actualStep = 2;
+
+			if (hasSend.status >= 400) hasFailed = true;
+		} catch {
+			hasFailed = true;
+		}
+	};
 </script>
 
 {#if $isBookFormOpened}
@@ -49,9 +70,11 @@
 				<Textarea
 					placeholder="Bonjour, j'organise mon mariage, pourriez vous me contacter au 06 XX XX XX XX"
 					class="mb-4 rounded-xl py-3"
-					value={text}
+					bind:value={text}
 				/>
-				<Button class="w-full rounded-xl p-6" on:click={() => (actualStep = 1)}>Suivant</Button>
+				<Button class="w-full rounded-xl p-6" on:click={() => (actualStep = 1)} disabled={!text}
+					>Suivant</Button
+				>
 			{/if}
 
 			{#if actualStep === 1}
@@ -61,16 +84,25 @@
 					Quelques précisions
 				</h2>
 
-				<Input placeholder="Votre email" value={email} class="mb-4 rounded-xl px-3 py-6" />
+				<Input placeholder="Votre email" bind:value={email} class="mb-4 rounded-xl px-3 py-6" />
 				<Input
 					placeholder="Date de votre évènement"
-					value={date}
+					bind:value={date}
 					class="mb-4 rounded-xl px-3 py-6"
 				/>
-				<Button class="w-full rounded-xl p-6" on:click={() => (actualStep = 2)}>Suivant</Button>
+				<Button
+					class="mb-4 w-full rounded-xl p-6"
+					variant="secondary"
+					on:click={() => (actualStep = 0)}>Précèdant</Button
+				>
+				<Button
+					class="w-full rounded-xl p-6"
+					on:click={() => sendEmail()}
+					disabled={!email || !date}>Suivant</Button
+				>
 			{/if}
 
-			{#if actualStep === 2}
+			{#if actualStep === 2 && !hasFailed}
 				<span class="mb-4 text-5xl"><IconCheck /></span>
 				<h2
 					class=" mb-2 text-center text-2xl font-semibold tracking-tighter sm:text-2xl lg:text-2xl"
@@ -80,8 +112,17 @@
 				<p class="mb-6 max-w-96 text-center text-sm tracking-tight">
 					Notre équipe se charge d'étudier votre demande
 				</p>
-				<Button class="w-full rounded-xl p-6" on:click={() => (actualStep = 2)}>Suivant</Button>
+				<Button
+					class="w-full rounded-xl p-6"
+					on:click={() => {
+						actualStep = 0;
+						isBookFormOpened.set(false);
+					}}>Terminer</Button
+				>
 			{/if}
+
+			{#if actualStep === 2 && hasFailed}Quelque chose s'est mal passé, veuillez réessayer
+				utlterieurement{/if}
 
 			<div
 				class="absolute bottom-2 left-[50%] flex translate-x-[-50%] gap-1 rounded-full bg-gray-200 px-2 py-1"

@@ -43,8 +43,7 @@
 		</h1>
 
 		<p class="my-5 text-center text-sm tracking-tight sm:max-w-md md:my-8 md:max-w-lg md:text-lg">
-			Barman cubain vous accompagne dans votre évènement et je sais pas quoi écrire donc pour
-			l'instant ça va rester ça
+			Besoin d'un barman à domicile ? L'équipe de Barman Cubain s'occupe de votre évènement de A à Z
 		</p>
 
 		<div class="flex gap-4">
