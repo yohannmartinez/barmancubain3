@@ -23,15 +23,42 @@
 					'Content-Type': 'application/json'
 				},
 				body: JSON.stringify({
-					text: `Email client: ${email}\nTel client: ${tel}\ndate: ${date}\ndemande:${text}`
+					text: `<div style="font-family: Arial, sans-serif; line-height: 1.5; color: #333; max-width: 600px; margin: auto; border: 1px solid #ccc; padding: 20px; border-radius: 10px;">
+        <h2 style="background-color: #f7f7f7; padding: 10px; text-align: center; color: #444; border-radius: 10px;">Nouvelle réservation</h2>
+        <p style="font-size: 16px;">Tu as reçu une nouvelle demande de réservation.</p>
+        <table style="width: 100%; margin-top: 20px; font-size: 16px;">
+          <tr>
+            <td style="padding: 10px; background-color: #f9f9f9; font-weight: bold;">Email client :</td>
+            <td style="padding: 10px;">${email}</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; background-color: #f9f9f9; font-weight: bold;">Téléphone :</td>
+            <td style="padding: 10px;">${tel}</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; background-color: #f9f9f9; font-weight: bold;">Date de l'évènement :</td>
+            <td style="padding: 10px;">${date}</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; background-color: #f9f9f9; font-weight: bold;">Demande spécifique :</td>
+            <td style="padding: 10px;">${text}</td>
+          </tr>
+        </table>
+        <p style="margin-top: 20px; font-size: 14px; color: #777;">Cet email a été généré automatiquement par le système de réservation.</p>
+      </div>
+    `
 				})
 			});
 
 			if (hasSend.status === 200) actualStep = 2;
 
-			if (hasSend.status >= 400) hasFailed = true;
+			if (hasSend.status >= 400) {
+				hasFailed = true;
+				actualStep = 2;
+			}
 		} catch {
 			hasFailed = true;
+			actualStep = 2;
 		}
 	};
 </script>
@@ -69,7 +96,7 @@
 					Donnez nous le maximum d'informations à propos de votre évènement
 				</p>
 				<Textarea
-					placeholder="Bonjour, j'organise mon mariage, pourriez vous me contacter au 06 XX XX XX XX"
+					placeholder="Bonjour, j'organise mon mariage, nous serons 350 etc..."
 					class="mb-4 rounded-xl py-3"
 					bind:value={text}
 				/>

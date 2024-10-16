@@ -1,3 +1,4 @@
+import { YAHOO_PASSWORD } from '$env/static/private';
 import nodemailer from 'nodemailer';
 
 export const POST = async ({ request }) => {
@@ -6,10 +7,10 @@ export const POST = async ({ request }) => {
 		const { text } = await request.json();
 
 		const transporter = nodemailer.createTransport({
-			service: 'yahoo',
+			service: 'gmail',
 			auth: {
-				user: 'barmancubain@yahoo.fr',
-				pass: 'nwbusawrcbvpqwdv'
+				user: 'yohannmartinez34@gmail.com',
+				pass: YAHOO_PASSWORD
 			}
 		});
 
@@ -17,7 +18,7 @@ export const POST = async ({ request }) => {
 			from: '"Barman Cubain" <barmancubain@yahoo.fr>',
 			to: 'renelier.martinez@yahoo.fr',
 			subject: 'Reservation depuis le site 💥',
-			text
+			html: text
 		};
 
 		await transporter.sendMail(mailOptions);
