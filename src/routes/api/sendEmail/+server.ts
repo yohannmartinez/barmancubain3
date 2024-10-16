@@ -1,4 +1,4 @@
-import { YAHOO_PASSWORD } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 import nodemailer from 'nodemailer';
 
 export const POST = async ({ request }) => {
@@ -10,7 +10,7 @@ export const POST = async ({ request }) => {
 			service: 'gmail',
 			auth: {
 				user: 'yohannmartinez34@gmail.com',
-				pass: YAHOO_PASSWORD
+				pass: env.YAHOO_PASSWORD
 			}
 		});
 
