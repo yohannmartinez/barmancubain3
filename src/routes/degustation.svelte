@@ -4,7 +4,7 @@
 </script>
 
 <div
-	class="w-full overflow-hidden rounded-3xl bg-[url('https://cocktailixir.com/wp-content/uploads/2023/07/choisir-atelier-cocktail-paris-evenement-prive-1.jpg')] bg-cover bg-center"
+	class="mx-[10px] w-[calc(100%-20px)] overflow-hidden rounded-3xl bg-[url('https://cocktailixir.com/wp-content/uploads/2023/07/choisir-atelier-cocktail-paris-evenement-prive-1.jpg')] bg-cover bg-center md:mx-[20px] md:w-[calc(100%-40px)]"
 >
 	<div class="bg-[linear-gradient(180deg,#0a0a0a_3%,#181a1d00_10%,#181a1d00_89%,#0a0a0a_97%);]">
 		<div
