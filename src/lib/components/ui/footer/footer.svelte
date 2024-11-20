@@ -9,7 +9,7 @@
 		class="text-md mx-10 flex flex-col items-center justify-center gap-3 font-medium tracking-tight md:flex-row md:justify-between"
 	>
 		<span>@barmancubain</span>
-		<span>0630587266</span>
+		<span>0677885293</span>
 		<span>renelier.martinez@yahoo.fr</span>
 	</div>
 </div>
